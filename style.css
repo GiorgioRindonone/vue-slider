@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  display:
+}
+
+
+.carousel-wrapper {
+  height: 100vh;
+  background-color: yellow;
+  display: flex;
+}
+
+.carousel {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  background-color: orange;
+  margin: auto;
+  align-items: center;
+}
+
+.carousel img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  object-position: center;
+}
+
+.carousel-images{
+  height: 100%;
+  padding: 10px;
+}
+
+.carousel i {
+  font-size: 40px;
+  cursor: pointer;
+}

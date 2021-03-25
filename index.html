@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/0ae8af7e4e.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="carousel-wrapper">
+        <div class="carousel">
+
+          <div class="carousel-prev">
+            <i @click="nextImage"  class="fas fa-chevron-left"></i>
+          </div>
+          <div class="carousel-img">
+            <!-- facciamo il v-bind dell'src passando il valore -->
+            <!-- mi creo una proprietà imageIndex per scorrere nell'array di images -->
+            <img :src="images[imageIndex]" alt="">
+            <div class="carousel-bullets">
+              <!-- <i class="fas fa-circle" v-for="(image, index) in images" :class="imageIndex == Index ? 'active' : ''" @click="bulletImage(index)"></i> -->
+              <i class="fas fa-circle" v-for="(image, index) in images" :class="imageIndex == Index ? 'active' : ''" @click="imageIndex = index"></i>
+
+            </div>
+          </div>
+
+          <div class="carousel-next">
+            <i @click="nextImage" class="fas fa-chevron-right"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- mi stampo numeri da uno a 100 e ogni 5 gli stampo un br per andare a capo -->
+      <!-- <span v-for="n in 100">{{ n }} <br v-if="n % 5 == 0"></span> -->
+    </div>
+    <script type="text/javascript" src="script.js">
+
+    </script>
+    </body>
+</html>
