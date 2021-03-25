@@ -16,7 +16,7 @@
         <div class="carousel">
 
           <div class="carousel-prev">
-            <i @click="nextImage"  class="fas fa-chevron-left"></i>
+            <i @click="prevImage"  class="fas fa-chevron-left"></i>
           </div>
           <div class="carousel-img">
             <!-- facciamo il v-bind dell'src passando il valore -->
@@ -24,7 +24,7 @@
             <img :src="images[imageIndex]" alt="">
             <div class="carousel-bullets">
               <!-- <i class="fas fa-circle" v-for="(image, index) in images" :class="imageIndex == Index ? 'active' : ''" @click="bulletImage(index)"></i> -->
-              <i class="fas fa-circle" v-for="(image, index) in images" :class="imageIndex == Index ? 'active' : ''" @click="imageIndex = index"></i>
+              <i class="fas fa-circle" v-for="(image, index) in images" :class="imageIndex == index ? 'active' : ''" @click="imageIndex = index"></i>
 
             </div>
           </div>

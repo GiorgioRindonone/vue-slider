@@ -4,8 +4,8 @@ var app = new Vue(
     el: "#app",
     data: {
       images: [
-        "https://www.venezia-help.com/wp-content/uploads/xcampeggi2-2.jpg.pagespeed.ic.AprYmGpuiy.jpg"
-        "https://www.radiomontecarlo.net/resizer/-1/-1/true/venezia-1570777493606.jpg--.jpg?1570777494000"
+        "https://www.venezia-help.com/wp-content/uploads/xcampeggi2-2.jpg.pagespeed.ic.AprYmGpuiy.jpg",
+        "https://www.radiomontecarlo.net/resizer/-1/-1/true/venezia-1570777493606.jpg--.jpg?1570777494000",
         "https://wips.plug.it/cips/initalia.virgilio.it/cms/2021/02/venezia-citta-fondata-da-una-donna.jpg"
       ],
       imageIndex: 0
@@ -20,16 +20,16 @@ var app = new Vue(
           this.imageIndex = 0;
         }
       },
-      nextImage: function() {
+      prevImage: function() {
         this.imageIndex--;
 
         if (this.imageIndex < 0 ) {
           this.imageIndex = this.images.length;
         }
       },
-      // bulletImage: function(i) {
-      //   this.imageIndex = i;
-      // }
+      bulletImage: function(i) {
+        this.imageIndex = i;
+      }
 
     }
   }
